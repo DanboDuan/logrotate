@@ -1,6 +1,6 @@
 # logrotate
 
-log rotate tool rewrite in Swift base on Swift NIO
+log rotate tool written in Swift base on Swift NIO
 
 ## Installation
 
@@ -36,3 +36,6 @@ OPTIONS:
 my_program | logrotate --line 1000 --MB 10 --max 10 --output /tmp/log/ --verbose
 
 ```
+## License
+
+[MIT](https://github.com/DanboDuan/logrotate/blob/master/LICENSE)
