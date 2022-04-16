@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug logrotate",
+            "program": "${workspaceFolder:logrotate}/.build/debug/logrotate",
+            "args": [],
+            "cwd": "${workspaceFolder:logrotate}",
+            "preLaunchTask": "swift: Build Debug logrotate"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release logrotate",
+            "program": "${workspaceFolder:logrotate}/.build/release/logrotate",
+            "args": [],
+            "cwd": "${workspaceFolder:logrotate}",
+            "preLaunchTask": "swift: Build Release logrotate"
+        }
+    ]
+}
