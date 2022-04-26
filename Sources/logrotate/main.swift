@@ -4,6 +4,7 @@
 // https://opensource.org/licenses/MIT
 
 import ArgumentParser
+import NIOCore
 import NIOPosix
 import ObjcSource
 import TSCBasic
@@ -34,7 +35,9 @@ struct Main: ParsableCommand {
         let bootstrap = NIOPipeBootstrap(group: group).channelInitializer { channel in
             channel.pipeline.addHandlers([
                 handler,
-            ])
+            ]).flatMap {
+                channel.setOption(ChannelOptions.autoRead, value: true)
+            }
         }
         let channel = try bootstrap.withPipes(inputDescriptor: STDIN_FILENO, outputDescriptor: STDOUT_FILENO).wait()
         try channel.closeFuture.wait()
