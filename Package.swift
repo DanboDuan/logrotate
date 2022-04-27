@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.1.2"),
-        .package(url: "https://github.com/apple/swift-tools-support-core.git", .revision("492fe8dbf50c6f906444dbc227d3edb35ab0f4a7")),
+        .package(url: "https://github.com/apple/swift-tools-support-core.git", from: "0.2.5"),
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.39.0"),
     ],
     targets: [
